@@ -69,6 +69,7 @@ class _NearByMapsState extends State<NearByMaps> {
             rotateGesturesEnabled: true,
             mapToolbarEnabled: true,
             tiltGesturesEnabled: true,
+
             markers: Set<Marker>.of(markers),
           ),
         ],
@@ -116,7 +117,7 @@ class _NearByMapsState extends State<NearByMaps> {
     });
     final String url =
         // "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=33.6352985,73.0738801&radius=1500&key=AIzaSyCTn4Z3MAP7r08YC5uttzpMY9kNoAWN87c&type=gas_station";
-        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat.toString()},${long.toString()}&radius=5000&key=AIzaSyCTn4Z3MAP7r08YC5uttzpMY9kNoAWN87c&type=gas_station";
+        "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat.toString()},${long.toString()}&radius=15000&key=AIzaSyCTn4Z3MAP7r08YC5uttzpMY9kNoAWN87c&type=gas_station";
 
     var request = http.Request('GET', Uri.parse(url));
 
